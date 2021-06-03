@@ -1,38 +1,204 @@
-.App {
-  text-align: center;
+:root{
+  --generalSpacing: 16px;
+  --textColor: #999999;  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#masterDiv{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: scroll;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*---- SEARCH BAR TOP ----*/
+#searchBar{
+  background: #FFE60D;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
 }
 
-.App-link {
-  color: #61dafb;
+/*---- SEARCH INPUT ----*/
+#search{
+  margin-left: 10px;
+  height: 32px;
+  outline: none;
+  width: 75%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#search::placeholder{
+  color: var(--textColor);
+}
+
+/*---- SEARCH BUTTON ----*/
+#btnSearch{
+width: 32px;
+height: 32px;
+padding-top: 5px;
+cursor: pointer;
+}
+
+/*---- ROUTE ----*/
+#route{
+  margin-top: var(--generalSpacing);
+  margin-left: 64px;
+  font-size: 14px;
+  color: var(--textColor);
+}
+
+/*---- PRODUCT ----*/
+
+#product{
+   /*PADDING*/
+  display: flex;
+  padding-top:var(--generalSpacing);
+  padding-left:var(--generalSpacing);
+  padding-right:var(--generalSpacing);
+  padding-bottom:var(--generalSpacing);
+  /*MARGIN*/
+  margin-top: var(--generalSpacing);
+  margin-left: var(--generalSpacing);
+  margin-right: var(--generalSpacing);
+  margin-bottom: var(--generalSpacing);
+  border: solid 1px var(--textColor);
+  overflow: hidden;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+#product:hover{
+  box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.1), 0px 1px 1px 0px #3483FA;  
+}
+
+/*---- IMAGE PRODUCT ----*/
+#img{
+  width: 180px;
+  height: 180px;
+  border-radius: 4px;
+  margin-right: var(--generalSpacing);
+}
+/*---- CONTENT PRODUCT INFORMATION ----*/
+#contentProduct{
+  display: block;
+}
+
+/*---- PRICE PRODUCT ----*/
+#headerPrice{
+  display: flex;
+  height: 32px;
+  font-size: 24px;
+  margin-top: var(--generalSpacing);
+}
+
+
+#ICShipping{
+  width: 20px;
+  height: 20px;
+  margin-top: 8px;
+  margin-left: 5px;
+}
+
+/*---- DESCRIPTION ----*/
+#description{
+  font-size: 18px;
+  margin-top: 32px;
+  hyphens: auto;
+  word-wrap: break-word;
+  line-break:strict;
+  padding-right: 50px;
+}
+
+/*---- ZONE ----*/
+#zoneDiv{ 
+  position: absolute;
+  margin-top: 26px;
+  right: 64px;
+}
+
+#zone{  
+  font-size: 12px;
+  text-align: right;
+}
+
+
+/*---- PRODUCTS DETAILS ----*/
+
+#containerProduct{
+  /*PADDING*/
+  display: flex;
+  padding-top:var(--generalSpacing);
+  padding-left:var(--generalSpacing);
+  padding-right:var(--generalSpacing);
+  padding-bottom:var(--generalSpacing);
+  /*MARGIN*/
+  margin-top: var(--generalSpacing);
+  margin-left: var(--generalSpacing);
+  margin-right: var(--generalSpacing);
+  margin-bottom: var(--generalSpacing);
+
+  
+}
+
+#imgDetailsProduct{
+  width: 680px;
+}
+
+#column1{
+  overflow: hidden;
+  display: grid;
+  max-width: 680px;
+}
+#column2{
+  margin-left: 18%;
+  
+}
+
+#titleDescription{
+  font-size: 28px;
+  margin-left: 32px;
+  margin-bottom: 32px;
+}
+
+#descriptiosDetails{
+  hyphens: auto;
+  word-wrap: break-word;
+  line-break:strict;
+  margin-left: 32px;
+  font-size: 16px;
+}
+
+#btnBuy{
+  background: #3483FA;
+  color: #fff;
+  width: 290px;
+  height: 42px;
+  margin-right: 32px;
+  cursor: pointer;
+  outline: none;
+}
+
+#sold{
+  font-size:14px;
+  margin-top:16px ;
+  margin-bottom: -16px;
+}
+
+#titleProduct{
+  font-size: 24px;
+  width: 204px;
+}
+
+#priceProduct{
+  font-size: 46px;
+}
+
+#breadCrumb{
+  cursor: pointer;
+}
+#breadCrumb:hover{
+  color: black;
 }
